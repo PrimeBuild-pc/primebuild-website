@@ -355,3 +355,14 @@ footer {
 #social.section-opening-effect {
   animation-delay: 4s; /* Ritardo di 4 secondi */
 }
+
+/* Stili per il testo su smartphone in modalità verticale */
+@media only screen and (max-width: 768px) {
+  #typing-text {
+    white-space: normal; /* Consente al testo di andare a capo */
+    line-height: 1.5; /* Aumenta l'altezza della riga per una migliore leggibilità */
+    margin-bottom: 20px; /* Riduce il margine inferiore per una migliore disposizione */
+    animation: typing 4s steps(50, end);
+  }
+}
+
