@@ -366,3 +366,18 @@ footer {
   }
 }
 
+/* Stili specifici per dispositivi con larghezza massima corrispondente a un telefono in modalità verticale */
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+  .video-container {
+    width: 80%; /* Aumenta la larghezza del container del video */
+    padding-top: 56.25%; /* Modifica l'altezza in base all'aspetto del video (rapporto 16:9) */
+    max-width: none; /* Rimuovi la larghezza massima */
+  }
+
+  .video-container video {
+    width: 100%; /* Imposta la larghezza al 100% del container del video */
+    height: 100%; /* Imposta l'altezza al 100% del container del video */
+  }
+}
+
+
