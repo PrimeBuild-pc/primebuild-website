@@ -1,0 +1,357 @@
+body {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background-color: #222; /* Colore di sfondo scuro */
+  margin: 0;
+  padding: 0;
+}
+
+/* Ad esempio, definisci la larghezza massima del contenitore */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #111; /* Colore di sfondo scuro per l'intestazione */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header img {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* CSS per animare gli h1 e h2 */
+h1, h2 {
+  transition: transform 0.3s ease; /* Effetto di transizione */
+}
+
+/* Animazione per l'apertura scenografica del titolo h1 */
+.opening-effect {
+  overflow: hidden;
+  position: relative;
+  animation: slideInFromTop 2s ease-in-out;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animazione dissolvenza con ritardo per la scritta "Il pc gaming è ora alla portata di tutti..." */
+.fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 4s; /* Ritardo di 4 secondi */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* CSS per animare l'opacità del logo */
+#logo {
+  opacity: 0; /* Imposta l'opacità a 0 per nascondere il logo all'inizio */
+  transition: opacity 1s ease; /* Aggiungi una transizione all'opacità */
+  animation: fadeInLogo 1s ease forwards;
+}
+
+/* Aggiungi un'animazione all'opacità del logo quando appare */
+#main-title.opening-effect {
+  animation: fadeInLogo 1s ease forwards;
+}
+
+@keyframes fadeInLogo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Aggiungi effetto di zoom al passaggio del mouse */
+h1:hover, h2:hover {
+  transform: scale(1.1); /* Ingrandisce l'elemento del 10% */
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+header p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+}
+
+section {
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Aggiungi animazione per l'effetto di digitazione */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Applica l'animazione al testo */
+#typing-text {
+  overflow: hidden;
+  border-right: 0.15em solid orange; /* Stile del cursore di digitazione */
+  white-space: nowrap; /* Evita che il testo venga spezzato */
+  margin: 0 auto;
+  padding-right: 0; /* Aggiungi un margine destro per il cursore */
+  animation: typing 4s steps(50, end) infinite alternate; /* Velocità di digitazione */
+  margin-bottom: 40px;
+}
+
+.video-container {
+  position: relative;
+  width: 25%; /* Imposta la larghezza al 50% del contenitore */
+  padding-top: 14.0625%; /* Imposta l'altezza in base all'aspetto del video (rapporto 16:9) */
+  max-width: 100px; /* Imposta una larghezza massima per il video */
+  margin: 0 auto; /* Centra il video */
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Imposta la larghezza al 100% del contenitore */
+  height: 100%; /* Imposta l'altezza al 100% del contenitore */
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* CSS per animare le immagini */
+.gallery-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.gallery-images img {
+  flex: 0 0 33.3%; /* Mostra solo quattro immagini alla volta */
+  width: 25%; /* Imposta la larghezza al 100% del contenitore */
+  height: 25%; /* Imposta l'altezza automatica per mantenere le proporzioni originali */
+  margin-right: 10px; /* Aggiunge uno spazio tra le immagini */
+  transition: transform 0.3s ease; /* Effetto di transizione */
+}
+
+/* Aggiungi effetto di ingrandimento al passaggio del mouse */
+.gallery-images img:hover {
+  transform: scale(1.1); /* Ingrandisce l'immagine del 10% */
+}
+
+.gallery-button {
+  position: absolute;
+  top: 50%;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff; /* Colore dei bottoni */
+  z-index: 1; /* Assicura che i pulsanti siano sopra le immagini */
+}
+
+#prevBtn {
+  left: 10px; /* Posiziona il bottone precedente a sinistra */
+}
+
+#nextBtn {
+  right: 10px; /* Posiziona il bottone successivo a destra */
+}
+
+.service {
+  background-color: #333; /* Colore di sfondo più scuro per i blocchi di servizio */
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombra più scura */
+  text-align: center; /* Allinea il testo al centro */
+  transition: transform 0.3s ease; /* Effetto di transizione */
+}
+
+/* Aggiungi effetto di traslazione al passaggio del mouse */
+.service:hover {
+  transform: translateY(-5px); /* Sposta il rettangolo verso l'alto di 5px */
+}
+
+.service h3 {
+  color: #fff; /* Testo bianco per i titoli dei servizi */
+  margin-top: 20px; /* Spazio sopra il titolo */
+  margin-bottom: 10px; /* Spazio sotto il titolo */
+}
+
+.service p {
+  transition: transform 0.3s ease; /* Effetto di transizione */
+  font-size: 16px;
+  color: #fff; /* Testo bianco per i paragrafi */
+  margin-bottom: 20px; /* Spazio sotto il paragrafo */
+}
+
+/* Aggiungi effetto di traslazione al passaggio del mouse */
+.service p:hover {
+  transform: translateY(-5px); /* Sposta il paragrafo verso l'alto di 5px */
+}
+
+.service h2 {
+  color: #fff; /* Testo bianco per i titoli dei servizi */
+  transition: transform 0.3s ease; /* Effetto di transizione */
+}
+
+/* Aggiungi effetto di zoom al passaggio del mouse */
+.service h2:hover {
+  transform: scale(1.1); /* Ingrandisce il titolo del 10% */
+}
+
+.service-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease; /* Effetto di transizione */
+}
+
+/* CSS per aprire automaticamente la sezione sottostante */
+.service:hover + .service-details {
+  max-height: 200px; /* Altezza massima della sezione sottostante */
+}
+
+#social {
+  padding: 50px 0;
+  text-align: center;
+}
+
+#social .container {
+  background-color: #333;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#social h2 {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+#social p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-button {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 0 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #7289da; /* Colore di sfondo di Discord */
+  transition: background-color 0.3s ease;
+}
+
+.social-button.instagram {
+  background-color: #e4405f; /* Colore di sfondo di Instagram */
+}
+
+.social-button:hover {
+  background-color: #555; /* Colore più scuro al passaggio del mouse */
+}
+
+footer {
+  background-color: #111; /* Colore di sfondo scuro per il piè di pagina */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Stili specifici per i dispositivi mobili */
+@media only screen and (max-width: 768px) {
+  /* Modifiche al layout per adattarsi ai dispositivi mobili */
+  .container {
+    padding: 10px;
+  }
+
+  /* Altri stili specifici per i dispositivi mobili... */
+}
+
+/* Stili specifici per i desktop */
+@media only screen and (min-width: 769px) {
+  /* Modifiche al layout per adattarsi ai desktop */
+  .container {
+    padding: 20px;
+  }
+
+  /* Altri stili specifici per i desktop... */
+}
+
+/* Animazione dissolvenza con ritardo per il sottotitolo */
+.opening-effect-delay {
+  opacity: 0;
+  animation: fadeIn 3s ease forwards;
+  animation-delay: 2s; /* Ritardo aggiuntivo di 2 secondi rispetto al titolo principale */
+}
+
+/* Animazione dissolvenza con ritardo per tutte le sezioni */
+.section-opening-effect {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+/* Ritardo aggiuntivo per la sezione "Chi siamo" */
+#about.section-opening-effect {
+  animation-delay: 1s; /* Ritardo di 1 secondo */
+}
+
+/* Ritardo aggiuntivo per la sezione "I nostri servizi" */
+#services.section-opening-effect {
+  animation-delay: 2s; /* Ritardo di 2 secondi */
+}
+
+/* Ritardo aggiuntivo per la sezione "Galleria" */
+#gallery.section-opening-effect {
+  animation-delay: 3s; /* Ritardo di 3 secondi */
+}
+
+/* Ritardo aggiuntivo per la sezione "Social" */
+#social.section-opening-effect {
+  animation-delay: 4s; /* Ritardo di 4 secondi */
+}
