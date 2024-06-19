@@ -124,7 +124,8 @@ section {
   white-space: nowrap; /* Evita che il testo venga spezzato */
   margin: 0 auto;
   padding-right: 0; /* Aggiungi un margine destro per il cursore */
-  animation: typing 4s steps(50, end) infinite alternate; /* Velocità di digitazione */
+  animation: typing 5s steps(50, end); /* Velocità di digitazione */
+  animation-delay: 2s;
   margin-bottom: 80px;
 }
 
