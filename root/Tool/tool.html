@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC MAKER AI CREATOR</title>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://discord.gg https://www.instagram.com; script-src 'self'; style-src 'self'; img-src 'self'">
+</head>
+<body>
+    <div class="top-banner">
+        <h1 id="title" class="title hidden">PC MAKER AI CREATOR</h1>
+        <h2 id="subtitle" class="subtitle hidden" style="text-transform: none;">Genera la tua build personalizzata in pochi secondi</h2>
+    </div>
+    <div class="container">
+        <div id="buttons" class="hidden">
+            <div class="options-row">
+                <button id="budgetButton" class="option-button">BUDGET</button>
+                <div id="budgetDropdown" class="dropdown hidden">
+                    <input type="number" id="budgetInput" placeholder="Inserisci il budget">
+                    <p id="budgetWarning" class="hidden">Il budget deve essere un numero intero maggiore o uguale a 550.</p>
+                </div>
+                <button id="usageButton" class="option-button">UTILIZZO</button>
+                <div id="usageDropdown" class="dropdown hidden">
+                    <select id="usageSelect">
+                        <option value="" selected disabled>Seleziona l'utilizzo</option>
+                        <option value="Competitive gaming">Competitive gaming</option>
+                        <option value="AAA gaming">AAA gaming</option>
+                        <option value="Mixed gaming">Mixed gaming</option>
+                        <option value="Workstation">Workstation</option>
+                    </select>
+                </div>
+                <button id="resolutionButton" class="option-button">RISOLUZIONE</button>
+                <div id="resolutionDropdown" class="dropdown hidden">
+                    <select id="resolutionSelect">
+                        <option value="" selected disabled>Seleziona la risoluzione</option>
+                        <option value="FHD 1920x1080p">FHD 1920x1080p</option>
+                        <option value="QHD 2560x1440p">QHD 2560x1440p</option>
+                        <option value="WQHD 3440x1440p">WQHD 3440x1440p</option>
+                        <option value="4K 3840x2160p">4K 3840x2160p</option>
+                    </select>
+                </div>
+            </div>
+            <button id="goButton" class="go-button disabled">VAI</button>
+        </div>
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+        </div>
+        <div id="productCard" class="product-card hidden">
+            <div class="product-info">
+                <div class="product-specs">
+                    <p>CPU: Ryzen 5 7600</p>
+                    <p>RAM: 2x16GB 6000MHz C30</p>
+                    <p>MOBO: B650 white atx</p>
+                    <p>GPU: RX 7800XT 16GB</p>
+                    <p>SSD: 1TB NVME GEN 4x4</p>
+                    <p>CASE: Phanteks NV5</p>
+                    <p>DISSIPATORE: Aria 5 HP 120mm</p>
+                    <p>PSU: 750W</p>
+                </div>
+                <div class="product-image">
+                    <img src="https://i.postimg.cc/yYdQPQvn/prova.png" alt="Product Image" crossorigin="anonymous">
+                </div>
+            </div>
+            <div class="price-camera-container">
+                <div class="price">1270€</div>
+                <div class="camera-icon" id="camera-button"></div>
+            </div>
+        </div>
+        <button id="orderButton" class="order-button hidden">ORDINA ORA</button>
+        <div id="socialBox" class="social-box hidden">
+            <div class="social-section">
+                <p>Unisciti alla nostra community!</p>
+                <a href="#" target="_blank" class="social-button discord">DISCORD</a>
+                <a href="#" target="_blank" class="social-button instagram">INSTAGRAM</a>
+            </div>
+        </div>
+        <footer class="footer">
+            © 2024 Prime Build. Tutti i diritti riservati.
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
