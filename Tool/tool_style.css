@@ -184,9 +184,12 @@ body {
 /* Loading spinner */
 .loading {
     position: absolute;
-    top: 60%; /* Sposta l'animazione di caricamento più in basso */
+    top: 60%; /* Assicurati che la posizione sia visibile */
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex; /* Aggiungi display: flex; per centrare lo spinner */
+    justify-content: center; /* Centra lo spinner orizzontalmente */
+    align-items: center; /* Centra lo spinner verticalmente */
 }
 
 .spinner {
