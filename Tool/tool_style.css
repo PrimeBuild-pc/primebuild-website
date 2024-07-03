@@ -304,6 +304,21 @@ body {
     cursor: pointer;
 }
 
+.screenshot-button {
+    width: 120px; /* Aggiusta la larghezza del pulsante per adattarsi all'icona */
+    height: 120px; /* Aggiusta l'altezza del pulsante per adattarsi all'icona */
+    border: none;
+    background-color: transparent; /* Imposta lo sfondo trasparente */
+    position: relative;
+    overflow: hidden;
+}
+
+.screenshot-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .order-button.hidden {
     display: none;
 }
