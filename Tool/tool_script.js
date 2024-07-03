@@ -99,21 +99,27 @@ document.addEventListener("DOMContentLoaded", () => {
             loading.classList.remove("hidden");
             loading.classList.add("visible");
         }
-        goButton.disabled = true;
-        setTimeout(() => {
-            loading.classList.remove("visible");
-            loading.classList.add("hidden");
-            productCard.classList.add("visible");
-            goButton.disabled = false;
-            orderButton.classList.remove("hidden");
-            footer.classList.remove("hidden");
-            alert("Build generata!");
 
-            // Assicurati che l'immagine di prova rimanga visibile dopo la generazione della build
-            const productImage = document.querySelector('#productCard .product-image');
-            productImage.style.display = 'block'; // Assicura che l'immagine sia visibile
-        }, 3000);
-    });
+goButton.addEventListener("click", () => {
+    if (!loading.classList.contains("visible")) {
+        loading.classList.remove("hidden");
+        loading.classList.add("visible");
+    }
+    goButton.disabled = true;
+    setTimeout(() => {
+        loading.classList.remove("visible");
+        loading.classList.add("hidden");
+        productCard.classList.add("visible");
+        goButton.disabled = false;
+        orderButton.classList.remove("hidden");
+        footer.classList.remove("hidden");
+        alert("Build generata!");
+
+        // Assicurati che l'immagine di prova rimanga visibile dopo la generazione della build
+        const productImage = document.querySelector('#productCard .product-image');
+        productImage.style.display = 'block'; // Assicura che l'immagine sia visibile
+    }, 3000);
+});
 
     const observer = new MutationObserver(checkFormValidity);
     observer.observe(budgetInput, { attributes: true, childList: true, subtree: true });
