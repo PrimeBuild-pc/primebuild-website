@@ -108,6 +108,10 @@ document.addEventListener("DOMContentLoaded", () => {
             orderButton.classList.remove("hidden");
             footer.classList.remove("hidden");
             alert("Build generata!");
+
+            // Assicurati che l'immagine di prova rimanga visibile dopo la generazione della build
+            const productImage = document.querySelector('#productCard .product-image');
+            productImage.style.display = 'block'; // Assicura che l'immagine sia visibile
         }, 3000);
     });
 
