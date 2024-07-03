@@ -332,6 +332,7 @@ body {
     left: 0;
     opacity: 0; /* Initially hidden */
     transition: opacity 1s ease-in-out; /* Smooth transition */
+    animation: fadeIn 1s;
     position: relative;
     margin-top: 20px; /* Spazio sopra il footer */
 }
