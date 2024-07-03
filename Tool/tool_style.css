@@ -291,32 +291,22 @@ body {
     transform: translateX(-50%);
 }
 
-.camera-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: orange;
+.screenshot-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* per renderlo tondo */
+    background-color: orange; /* colore di sfondo del pulsante */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('https://img.icons8.com/metro/452/camera.png');
-    background-size: cover;
-    cursor: pointer;
+    cursor: pointer; /* cursore a forma di mano quando si passa sopra */
 }
 
-.screenshot-button {
-    width: 120px; /* Aggiusta la larghezza del pulsante per adattarsi all'icona */
-    height: 120px; /* Aggiusta l'altezza del pulsante per adattarsi all'icona */
-    border: none;
-    background-color: transparent; /* Imposta lo sfondo trasparente */
-    position: relative;
-    overflow: hidden;
-}
-
-.screenshot-button img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.round-button img {
+    width: 80px; /* dimensioni desiderate per l'immagine */
+    height: auto;
+    opacity: 1; /* opacità completa per rendere l'immagine visibile */
+    background-color: transparent; /* rende lo sfondo trasparente */
 }
 
 .order-button.hidden {
