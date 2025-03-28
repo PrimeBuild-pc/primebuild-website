@@ -1,6 +1,6 @@
 # ⚠️ DEPRECATED ⚠️
 
-## PrimeBuild Website - Versione Precedente
+## PrimeBuild Website - Versione precedente
 
 **Questo repository è stato deprecato e non è più mantenuto.**
 
@@ -9,14 +9,14 @@
 Il progetto è stato migrato al nuovo repository ufficiale:
 [https://github.com/PrimeBuild-pc/webapp](https://github.com/PrimeBuild-pc/webapp)
 
-### 🔄 Motivi della Migrazione
+### 🔄 Motivi della migrazione
 
 - Aggiornamento completo dell'architettura
 - Nuovo design e interfaccia utente migliorata
 - Migliore organizzazione del codice e prestazioni
 - Implementazione di nuove funzionalità
 
-### 🚫 Non Utilizzare Questo Codice
+### 🚫 Non utilizzare questo codice
 
 Questo codice non verrà più aggiornato. Si prega di fare riferimento al nuovo repository per tutti gli sviluppi futuri, correzioni di bug e miglioramenti.
 
